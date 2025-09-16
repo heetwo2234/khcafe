@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHCafe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #037fc7; 
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .header .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header .search input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .header .search button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            border: none;
+            border-radius: 3px;
+            background: white;
+            color: #037fc7;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .top-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+
+        .main {
+            display: grid;
+            grid-template-columns: 200px 1fr 250px;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar-left {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .sidebar-left h2 {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-left ul {
+            list-style: none;
+        }
+
+        .sidebar-left a {
+            display: block;
+            padding: 5px 0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .content article {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .content h2 {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .login-box {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background:#037fc7;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .ad-banner {
+            background: #fff;
+            text-align: center;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 5px;
+}
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+        <a href="#"><h2>KHCafe</h2></a>
+        </div>
+        <div class="search">
+        <input type="text" placeholder="검색어를 입력하세요">
+        <button>검색</button>
+        </div>
+        <nav class="top-nav">
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="notice.html">공지사항</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">사진첩</a></li>
+            <li><a href="event.html">이벤트</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <aside class="sidebar-left">
+        <h2>카테고리</h2>
+        <ul>
+            <li><a href="#">인기게시판</a></li>
+            <li><a href="#">자유게시판</a></li>
+            <li><a href="#">정보게시판</a></li>
+            <li><a href="#">Q&A</a></li>
+            <li><a href="#">스터디</a></li>
+            <li><a href="notice.html">공지사항</a></li>
+            <li><a href="event.html">이벤트</a></li>
+
+        </ul>
+        </aside>
+
+        <section class="content">
+        <article class="notice">
+            <h2>공지사항</h2>
+            <ul>
+            <li><a href="#">[필독] 카페 이용 규칙 안내</a></li>
+            <li><a href="#">9월 이벤트 공지</a></li>
+            <li><a href="#">새로운 게시판 추가 안내</a></li>
+            </ul>
+        </article>
+
+        <article class="latest-posts">
+            <h2>최신 글</h2>
+            <ul>
+            <li><a href="#">AWS가 뭔가요?</a> - by 홍길동</li>
+            <li><a href="#">AWS 질문있습니다.</a> - by 일이삼</li>
+            <li><a href="#">자바가 뭔가요?</a> - by 칠팔구</li>
+            </ul>
+        </article>
+        </section>
+
+        <aside class="sidebar-right">
+        <div class="login-box">
+            <h2>로그인</h2>
+            <input type="text" placeholder="아이디">
+            <input type="password" placeholder="비밀번호">
+            <button onclick="location.href='login.html'">로그인</button>
+            <div class="login-links">
+            <a href="#">아이디찾기</a> | 
+            <a href="#">비밀번호찾기</a> | 
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+
+
+        </aside>
+    </main>
+
+    <div class="ad-banner">
+    <a href="#" target="_blank">
+        <img src="images/banner.PNG" alt="광고" width="100%">
+    </a>
+</div>
+
+
+
+        <footer class="footer">
+        <p>© 2025 KHCafe. All Rights Reserved.</p>
+        </footer>
+</body>
+</html>
